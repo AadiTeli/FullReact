@@ -1,24 +1,20 @@
-import { logDOM } from '@testing-library/react';
 import React, { Component } from 'react'
 
 export default class App extends Component {
-    render() {
 
-        state = {
-            users: [
-        
-                      { id: 1, name: "John Doe" },
-                      { id: 2, name: "Victor Wayne" },
-                      { id: 3, name: "Jane Doe" },
-            ]
-        };
-
-                const newUsers = this.state.users.map(user =>
-                {
-                    
-                });
-            
+    state={
+        value: "Hello this is textarea what we are learning today!!"
     }
-    return null;
-}
+    HandleChange = e =>
+    {
+        this.setState({value:e.target.value})
+    }
+
+    render() {
+        return (
+            <div>
+                <textarea value={this.state.value} onChange={this.HandleChange} />
+                </div>
+        )
+    }
 }
