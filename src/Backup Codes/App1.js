@@ -71,6 +71,7 @@
 
 // ------------------------------------------------------------------
 
+import { computeHeadingLevel } from '@testing-library/dom'
 import React, { Component } from 'react'
 
 
@@ -271,7 +272,7 @@ import React, { Component } from 'react'
 //                 <h1> Hello </h1>
 //             </div>
 //         )
-//     }
+//     }bhai aa backup code chhe
 // }
 
 import React, { useState } from 'react'
@@ -349,3 +350,236 @@ import React,{useEffect, useState} from 'react'
 // export default App;
 
 
+
+
+// Controlled Component / Uncontrolled Component
+
+// import React, { Component } from 'react'
+// import './App.css'
+
+// export default class App extends Component {
+//             // const btnstyle=
+//             // {
+//             //     color:"blue",
+//             //     backgroundColor:"orange"
+//             // }
+//             state ={
+//                 // value:"Aadi Hello"
+//                 value:""
+//             }
+
+//             handlechange =(e) =>
+//             {
+//                 console.log(e);
+//                 this.setState({value:e.target.value})
+//             }
+//             render() {
+
+//             return (
+
+//             <div>
+//                 <input type="text" value={this.state.value} onChange={this.handlechange} />
+//             </div>
+//              )
+//     }
+// } 
+
+import React, { Component } from 'react'
+
+// export default class App extends Component {
+
+//     state={
+//         value: "Hello this is textarea what we are learning today!!"
+//     }
+//     HandleChange = e =>
+//     {
+//         this.setState({value:e.target.value})
+//     }
+
+//     render() {
+//         return (
+//             <div>
+//                 <textarea value={this.state.value} onChange={this.HandleChange} />
+//                 </div>
+//         )
+//     }
+// }
+
+// arey bt output not computeHeadingLevel
+// see try using console, it's working
+// show menubar
+
+import React, { Component } from 'react'
+
+// export default class App extends Component {
+
+//     state ={
+//         Name : "Aadi",
+//         Pass : 123
+//     }
+//     handleChange = e =>
+//     {
+//         // this.setState({[e.target.name]: e.target.value});
+//         // console.log({[e.target.name]: e.target.value});;
+        
+//         // this.setState({[e.target.name]: e.target.value});
+//         const value = e.target.name === "Name" ? e.target.value.toUpperCase() : e.target.value;
+//         console.log("e.target.name",e.target.name);
+//         // console.log("value",value);
+//         // console.log({[e.target.name] : value});
+        
+//         // Selection, but when i try to use on frontend without console not workng 
+        
+//         this.setState({[e.target.name]: value})
+        
+//         // console.log({[e.target.name]:this.value})
+        
+//     }
+    
+
+//     render() {
+//         return (
+//             <div>
+//                 <label>
+//                     Name : <input type="text" value={this.state.Name} onChange={this.handleChange} name="Name"/>
+//                 </label>
+//                 <label>
+//                     Password : <input type="text" value={this.state.Pass} onChange={this.handleChange} name="Pass"/>
+//                 </label>
+                
+//             </div>
+//         )
+//     }
+// }
+
+
+
+
+
+
+
+import React, { Component } from 'react'
+
+// export default class App extends Component {
+
+//     constructor(props)
+//     {
+//         super(props)
+//         this.textInput = React.createRef();
+//         this.state={
+//             value : ""
+//         }
+//     }
+
+//     componentDidMount = () =>
+//     {
+//         this.textInput.current.focus()
+//     }
+
+//     handleSubmit = e =>
+//     {
+//         e.preventDefault();
+//         this.setState({value :this.textInput.current.value})
+//         console.log("log",this.textInput.current.value);
+//     }
+
+//     render() {
+//         return (
+//             <div>
+//                 <div>
+//                     <form onSubmit={this.handleSubmit}>
+//                         <h1> You Typed : {this.state.value} </h1>
+            
+
+//                         <label>
+//                             Name: <input type="text" ref={this.textInput}/>
+//                         </label>
+//                         {/* <label>
+//                             Password: <input type="password" />
+//                         </label> */}
+//                         <input type = "submit" value="Submit"/>
+//                     </form>
+//                 </div>
+//             </div>
+//         )
+//     }
+// }
+
+
+
+import React, { Component } from 'react'
+// import Child2 from './Child2';
+// export const Context = React.createContext();
+
+// export default class App extends Component {
+
+//     state=
+//     {
+//         name: "Aadi",
+//         value: 10
+//     }
+
+//     handler = () =>
+//     {
+//         this.setState({value: this.state.value +1})
+//     }
+
+
+//     render() {
+
+//         const ContextValue ={
+//             data: this.state,
+//             EventClick: this.handler
+//         }
+
+//         return (
+//             <div>
+//                 <Context.Provider value={ContextValue}>
+//                 <Child2/>
+//                 </Context.Provider>
+                
+//             </div>
+           
+//         )
+//     }
+// }
+
+
+
+import React, { Component } from 'react'
+// import { Provider } from './Context';
+// import Child2 from './Child2';
+
+// export default class App extends Component {
+
+
+//     state=
+//     {
+//         name: "Aadi",
+//         value: 10
+//     }
+
+//     handler = () =>
+//     {
+//         this.setState({value: this.state.value +1})
+//     }
+
+
+//     render() {
+
+//         const ContextValue ={
+//             data: this.state,
+//             EventClick: this.handler
+//         }
+
+//         return (
+//             <div>
+//                 <Provider value={ContextValue}>
+//                 <Child2/>
+//                 </Provider>
+                
+//             </div>
+           
+//         )
+//     }
+// }
