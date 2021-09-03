@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import reactDom from 'react-dom'
+import Table from './Table'
+
 
 export const Task2React = () => {
 
@@ -16,11 +19,11 @@ export const Task2React = () => {
     const eventChange1 = e => {
         setState({ ...state, Age: e.target.value })
     }
-console.log("statess",state);
+// console.log("statess",state);
     const handleButton = e => {
         e.preventDefault();
 
-        if(state.Name!=="" && state.Age!==""){
+        if(state.Name=="Aadi" && state.Age=="21"){
 
         if (state.id === undefined) {
 
@@ -52,7 +55,7 @@ console.log("statess",state);
 
     }
     else{
-        alert("Data Should not be Blank!")
+        alert("Wrong Credentials!")
     }
 }
 
@@ -106,32 +109,22 @@ console.log("statess",state);
                 <button type="submit" value="Update" class={state.id === undefined ? "btn btn-success" : "btn btn-warning"} onClick={(e) => handleButton(e)}> {state.id === undefined ? "Input Data" : "Update Data"} </button>
 
                 {/* <button onClick={ eventDelete} class="btn btn-danger"> Delete Data </button> */}
-                <table class="table">
-                    <thead>
-                        <tr>
 
-                            <th scope="col">ID</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Age</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {state.Data.map(xx => {
-                            return <tr>
-                                <th scope="row">{xx.id}</th>
-                                <td>{xx.Name}</td>
-                                <td>{xx.Age}</td>
-                                <td><button class="btn btn-warning" onClick={(e) => eventEdit(e, xx)}> Edit </button></td>
-                                <td><button class="btn btn-danger" onClick={(e) => onRemove(e, xx.id)}> Delete </button></td>
-                            </tr>
+                {/* eventEdit = {()=>{}}
+                onRemove = {()=>{}} */}
 
-                        })}
-                    </tbody>
-                </table>
+                <Table 
+                state = {state.Data}
+                eventEdit = {(e, xx) => eventEdit(e, xx)}
+                onRemove = {(e, id) => onRemove(e, id)} 
+                />
+
             </form>
         </div>
     )
 }
 
 
+// onRemove = (e, id)
+// const eventEdit = (e, xx) => {
 export default Task2React
