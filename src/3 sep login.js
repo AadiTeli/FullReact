@@ -34,7 +34,7 @@ export const Data = () => {
     const eventSubmit = e =>
     {
         e.preventDefault()
-        
+        if(state.Name!="" && state.Age!="21"){
         // console.log("a",state);
         let FinalData = {
             id : state?.Data?.length,
@@ -50,7 +50,7 @@ export const Data = () => {
             Password:""
         })
     }
-    
+}
     console.log("data",state);
     console.log("data1",state.Data);
 

@@ -10,8 +10,6 @@ export const Login = () => {
 
     var z = JSON.parse(localStorage.getItem("test"))
 
-
-
     const [data, setData] = useState({
         Name: "",
         Password: "",
@@ -42,6 +40,7 @@ export const Login = () => {
         console.log("dd", ddd)
         if (ddd.length>0) {
             history.push("/home");
+            localStorage.setItem("token","token")
             alert("Successfully Login")
         } else {
             alert("Wrong Credentials!")
