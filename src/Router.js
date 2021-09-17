@@ -6,6 +6,7 @@ import {
 import Data from "./3 sep login";
 import Home from "./Components/Home";
 import Login from "./Components/login";
+import Advjava from "./advjava";
 import { ProtectedRouter } from "./ProtectedRouter";
 
 
@@ -18,6 +19,8 @@ const Router = () => {
                     <Route exact path="/" component={Data} />
                     <Route exact path="/registration" component={Data} />
                     <Route exact path="/login" component={Login} />
+                    <Route exact path="/advjava" component={Advjava} />
+
                     <ProtectedRouter exact path="/Home" component={Home} />
                 </Switch>
             </BrowserRouter>
